@@ -49,5 +49,7 @@ Vagrant.configure("2") do |config|
       vb.memory = '2096'
       vb.cpus = '1'
     end
+
+    server.vm.provision "shell", path: "install-dokku.sh"
   end
 end
